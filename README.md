@@ -6,17 +6,18 @@ This code contains the IS2TA algorithm and the helper functions that supply it. 
 
 The algorithmn follows three main features:
 
-(1) Creating Tracelines (time-series close to the trace we hope to recover)
-(2) Assigning SKATE segments to Tracelines and Interpolating
-(3) Minute-Mark Detection and Data Cleaning/Transforming
+1. Creating Tracelines (time-series close to the trace we hope to recover)
+2. Assigning SKATE segments to Tracelines and Interpolating
+3. Minute-Mark Detection and Data Cleaning/Transforming
 
 Features (1) and (2) are done iteratively: once segments are assigned, tracelines are restimated. IS2TA uses two iterations.
 
 The code lays IS2TA into four phases:
-(1) Meanline and Traceline Creation
-(2) First Traceline Assignment and Interpolation
-(3) Second Traceline Assignment and Interpolation
-(4) Cleaning
+
+1. Meanline and Traceline Creation
+2. First Traceline Assignment and Interpolation
+3. Second Traceline Assignment and Interpolation
+4. Cleaning
 
 Note minute-mark detection is done in phase (3). The details on how tracelines are created, assigned, and interpolated vary between phases (2) and (3) and are detailed in the code.
 

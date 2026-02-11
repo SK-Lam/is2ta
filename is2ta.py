@@ -3,8 +3,26 @@
 from collections import defaultdict
 import numpy as np
 import pandas as pd
+import json
 
 from scipy.interpolate import CubicSpline
+
+## your file here:
+filepath = 'SEIMOGRAM'
+
+##import data 
+def load_skate_json(filepath):
+
+    with open(filepath, "r") as f:
+        return json.load(f)
+
+# load raw data
+segments_raw = load_skate_json("segments.json")
+meanlines_raw = load_skate_json("meanlines.json")
+
+# process geometry
+segments_df = skate_processing(segments_raw)
+meanlines_df = skate_processing(meanlines_raw)
 
 ## helper functions
 

@@ -7,8 +7,6 @@ import json
 
 from scipy.interpolate import CubicSpline
 
-## your file here:
-filepath = 'SEIMOGRAM'
 
 ##import data 
 def load_skate_json(filepath):

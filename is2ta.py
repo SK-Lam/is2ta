@@ -15,12 +15,10 @@ def load_skate_json(filepath):
         return json.load(f)
 
 # load raw data
-segments_raw = load_skate_json("segments.json")
-meanlines_raw = load_skate_json("meanlines.json")
+segment= load_skate_json("segments.json")
+meanlines= load_skate_json("meanlines.json")
 
-# process geometry
-segments_df = skate_processing(segments_raw)
-meanlines_df = skate_processing(meanlines_raw)
+
 
 ## helper functions
 
